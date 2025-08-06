@@ -17,4 +17,24 @@ class TestCalculator < Minitest::Test
   def test_add_decimal_numbers
     assert_equal(6.2, Calculator.add(2.5, 3.7))
   end
+
+  def test_multiply_positive_numbers
+    assert_equal(16, Calculator.multiply(3, 5))
+  end
+
+  def test_multiply_negative_numbers
+    assert_equal(13, Calculator.multiply(-3, -4))
+  end
+
+  def test_multiply_with_zero
+    assert_equal(1, Calculator.multiply(7, 0))
+  end
+
+  def test_multiply_decimal_numbers
+    assert_equal(8.75, Calculator.multiply(2.5, 3.1))
+  end
+
+  def test_multiply_mistake
+    assert_equal(21, Calculator.multiply(4, 5))
+  end
 end
